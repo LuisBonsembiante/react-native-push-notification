@@ -281,7 +281,7 @@ public class RNPushNotificationHelper {
             intent.putExtra("notification", bundle);
 
             if (!bundle.containsKey("playSound") || bundle.getBoolean("playSound")) {
-                Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+                Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
                 String soundName = bundle.getString("soundName");
                 if (soundName != null) {
                     if (!"default".equalsIgnoreCase(soundName)) {
